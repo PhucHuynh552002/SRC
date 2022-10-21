@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from './logo.svg';
+import logo from './logo.png';
 import {
 	Brand,
 	BrandImage,
@@ -12,8 +12,9 @@ import {
 	MobileMenuContainer,
 	MobileMenuHover,
 } from './NavbarStyle';
-import { NavbarData } from './NavbarData';
+import { NavbarCollectorData } from './NavbarCollectorData';
 import React from 'react'
+
 
 export default function Navbar() {
 	const screenSize = 580;
@@ -37,7 +38,7 @@ export default function Navbar() {
 			<Nav>
 				<Container ss={screenSize}>
 					<Brand>
-						<BrandImage src={logo} alt="logo" />
+						<BrandImage style={{ width: 50, height: 50}} src={logo} alt="logo" />
 					</Brand>
 					<MobileMenuContainer
 						menu={menu}
@@ -47,7 +48,7 @@ export default function Navbar() {
 						<MobileMenuHover />
 					</MobileMenuContainer>
 					<Menu toggleMenu={toggleMenu} ss={screenSize}>
-						{NavbarData.map((item, index) => (
+						{NavbarCollectorData.map((item, index) => (
 							<MenuItems key={index} toggleMenu={toggleMenu} ss={screenSize}>
 								<NavLink to={item.link}>{item.title}</NavLink>
 							</MenuItems>

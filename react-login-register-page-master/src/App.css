@@ -141,3 +141,10 @@ form span {
 .home-page-title {
     color: #222
 }
+.circle {
+    display:flex;
+    background-color: red;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+  }

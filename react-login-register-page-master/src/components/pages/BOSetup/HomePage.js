@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Navbar from './Navbar/Navbar'
-
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Navbar from './Navbar'
+import account from './Account'
 export default function HomePage() {
     return (
         <div>
@@ -10,10 +10,11 @@ export default function HomePage() {
 			<Router>
 				<Navbar />
 				<Switch>
-					<Route path="/" element="Home" />
-					<Route path="/services" element="Services" />
-					<Route path="/about" element="About" />
-					<Route path="/contact" element="Contact" />
+					<Route path="/home" element="Home" />
+					<Route path="/account" component= {account} />
+					<Route path="/mcp" element="MCP" />
+					<Route path="/vehicle" element="Vehicle" />
+					<Route path="/task1" element="Task Assignment" />
 				</Switch>
 			</Router>
 		</>
@@ -25,3 +26,5 @@ export default function HomePage() {
         </div>
     )
 }
+
+
