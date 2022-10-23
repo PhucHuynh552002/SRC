@@ -1,21 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import BackgroundImage from '../../../assets/images/bg.png'
 
 export default function account() {
     return (
-        <header style={ HeaderStyle }>
+        <header style={ HeaderStyle}>
         <div>
-            <h1 className="main-title text-center">login / register page</h1>
-            <p className="main-para text-center">join us now and don't waste time</p>
-            <div className="buttons text-center">
-                <Link to="/login">
-                    <button className="primary-button">log in</button>
+            <h1 className="text-center" style={{color: 'black'}}>ACCOUNT INFORMATION</h1>
+                <Link to="/">
+                    <div className="fixed-bottom">
+                    <button className="primary-button">Log out</button>
+                    </div>
                 </Link>
-                <Link to="/register">
-                    <button className="primary-button" id="reg_btn"><span>register </span></button>
-                </Link>
+        </div>
+        <div class="container">
+            <div class="circle"style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
+                <p className='text'> Profile Picture</p>
             </div>
+        </div>
+        <div>
+            <h1 className="text-center">Name</h1>
         </div>
         </header>
     )
@@ -23,7 +26,6 @@ export default function account() {
 const HeaderStyle = {
     width: "100%",
     height: "100vh",
-    background: `url(${BackgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
