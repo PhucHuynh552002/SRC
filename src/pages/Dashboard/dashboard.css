@@ -1,0 +1,25 @@
+.dashboard {
+  display: flex;
+}
+.dashboardContainer {
+  flex: 6;
+}
+.content {
+  margin: 0px 40px;
+  padding: 10px 0px;
+}
+.tool {
+  display: flex;
+}
+
+.toolContainer {
+  flex: 6;
+}
+
+.content {
+  margin: 0px 40px;
+  padding: 10px 0px;
+}
+.sizeee{
+  font-size: 5px;
+}
